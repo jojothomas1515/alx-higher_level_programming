@@ -15,7 +15,7 @@ int check_cycle(listint_t *list)
 
 	n_node = list;
 	t_node = list->next;
-	while (n_node && t_node)
+	while (n_node && t_node->next)
 	{
 
 		if (n_node == n_node->next || n_node == n_node->next->next)
