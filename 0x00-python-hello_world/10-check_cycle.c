@@ -8,24 +8,21 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *n_node, *t_node;
+	listint_t *n, *t;
 
 	if (list == NULL)
 		return (0);
 
-	n_node = list;
-	t_node = list->next;
-	while (n_node && t_node->next)
+	n = list;
+	t = list->next;
+	for (; n && t; t = t->next, n = n->next->next)
 	{
-
-		if (n_node == n_node->next || n_node == n_node->next->next)
+		if (n == n->next)
+			return (1);
+		if (n == t)
 			return (1);
 
-		if (n_node == t_node || n_node == t_node->next)
-			return (1);
 
-		n_node = n_node->next;
-		t_node = t_node->next->next;
 	}
 	return (0);
 }
