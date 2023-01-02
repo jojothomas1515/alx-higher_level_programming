@@ -14,14 +14,14 @@ int check_cycle(listint_t *list)
 		return (0);
 
 	n_node = list;
-	t_node = list->next;
-	while (n_node)
+	t_node = list->next->next;
+	while (n_node && t_node)
 	{
 
 		if (n_node == n_node->next)
 			return (1);
 
-		if (n_node == t_node || n_node == t_node->next)
+		if (n_node == t_node)
 			return (1);
 		n_node = n_node->next;
 		t_node = t_node->next->next;
