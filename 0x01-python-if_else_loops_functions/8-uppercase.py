@@ -6,5 +6,3 @@ def uppercase(str):
                           else chr(ord(str[i]))),
               end="")
     print("")
-
-uppercase("holberton")
