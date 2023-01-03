@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-n = -1 if number < 10 else 1
+n = -1 if number < 0 else 1
 ld = n * (abs(number) % 10)     # 'ld' stands for last digit
 
 if ld == 0:
