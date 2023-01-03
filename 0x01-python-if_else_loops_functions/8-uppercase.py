@@ -5,5 +5,3 @@ def uppercase(str):
             print("{}".format(chr(ord(str[i])-0x20)), end='')
             continue
         print(str[i], end='')
-
-uppercase("jojo thoMaS")
