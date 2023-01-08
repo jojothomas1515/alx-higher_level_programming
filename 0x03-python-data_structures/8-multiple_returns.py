@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-from fcntl import F_EXLCK
-
-
 def multiple_returns(sentence):
     length: int = len(sentence)
     f_char: str = sentence[0] if length > 0 else None
