@@ -1,5 +1,5 @@
 #include "lists.h"
-#define LINKED_LIST_PTR_ARRAY_SIZE 100
+#define LINKED_LIST_PTR_ARRAY_SIZE 1024
 
 /**
  * llen - returns the length or size of the linked list
