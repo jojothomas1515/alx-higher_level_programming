@@ -22,5 +22,5 @@ def add_tuple(tuple_a=(), tuple_b=()) -> tuple:
 
 if __name__ == '__main__':
 
-    j: tuple[int, int] = add_tuple((22,), (43, 32))
+    j: tuple[int, int] = add_tuple((21, 22), (43,))
     print(j)
