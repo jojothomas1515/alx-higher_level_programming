@@ -44,7 +44,6 @@ int is_palindrome(listint_t **head)
 		arr[i] = current;
 		current = current->next;
 	}
-	arr[i] = NULL;
 
 	for (i = 0; i < len / 2; i++)
 	{
