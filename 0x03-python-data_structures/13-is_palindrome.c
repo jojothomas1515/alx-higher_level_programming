@@ -1,4 +1,5 @@
 #include "lists.h"
+#define LINKED_LIST_PTR_ARRAY_SIZE 100
 
 /**
  * llen - returns the length or size of the linked list
@@ -30,26 +31,25 @@ int llen(listint_t *head)
 int is_palindrome(listint_t **head)
 {
 	int len = 0, i;
-	listint_t **arr, *current;
+	listint_t *arr[LINKED_LIST_PTR_ARRAY_SIZE];
+	listint_t *current;
 
 	if (head == NULL || (*head) == NULL)
 		return (0);
 
-	len = llen((*head));
-	arr = malloc(sizeof(listint_t) * len);
 	current = (*head);
 
-	for (i = 0; i < len && current != NULL; i++)
+	for (i = 0; current != NULL; i++, len++)
 	{
 		arr[i] = current;
 		current = current->next;
 	}
+	arr[i] = NULL;
 
 	for (i = 0; i < len / 2; i++)
 	{
 		if (arr[i]->n != arr[(len - 1) - i]->n)
 			return (0);
 	}
-	free(arr);
 	return (1);
 }
