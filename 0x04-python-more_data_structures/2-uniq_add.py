@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
 def uniq_add(my_list=[]):
+    acc = 0
 
-    return reduce(lambda x, y: x+y, set(my_list))
+    return acc
 
 
 if __name__ == '__main__':
