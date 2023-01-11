@@ -4,7 +4,9 @@ from hmac import new
 
 
 def update_dictionary(a_dictionary, key, value):
-    if a_dictionary is not None and type(a_dictionary) == dict:
+    if key is None or key == "":
+        return (a_dictionary)
+    elif a_dictionary is not None and type(a_dictionary) == dict:
         a_dictionary[key] = value
         return a_dictionary
     else:
