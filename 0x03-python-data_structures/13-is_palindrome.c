@@ -33,7 +33,7 @@ int is_palindrome(listint_t **head)
 	listint_t **arr, *current;
 
 	if (head == NULL || (*head) == NULL)
-		return (0);
+		return (1);
 
 	len = llen((*head));
 	arr = malloc(sizeof(listint_t) * len);
