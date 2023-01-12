@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-from hashlib import new
-
 
 def uniq_add(my_list=[]):
     new_li = []
