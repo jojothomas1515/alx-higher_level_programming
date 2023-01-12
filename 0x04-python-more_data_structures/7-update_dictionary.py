@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-from hmac import new
-
-
 def update_dictionary(a_dictionary, key, value):
     if key is None or key == "":
         return (a_dictionary)
