@@ -1,0 +1,9 @@
+{
+        "files.associations": {
+                "*.c": "c",
+                "lists.h": "c",
+                "main.h": "c",
+                "python.h": "c"
+        },
+        "editor.formatOnPaste": true
+}
