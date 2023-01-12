@@ -1,9 +1,15 @@
 #!/usr/bin/python3
+from hashlib import new
+
 
 def uniq_add(my_list=[]):
-    acc = 0
-
-    return acc
+    new_li = []
+    acc: int = 0
+    for i in my_list:
+        if i not in new_li:
+            new_li.append(i)
+            acc += i
+    return (acc)
 
 
 if __name__ == '__main__':
