@@ -10,15 +10,18 @@ def list_division(my_list_1, my_list_2, list_length):
             list_len += 1
         except TypeError:
             print("wrong type")
+            new_list.append(0)
+
         except ZeroDivisionError:
             print("division by zero")
+            new_list.append(0)
+
         except IndexError:
             print("out of range")
+            new_list.append(0)
+
         finally:
-            if list_len - 1 != i and (i+1) < max(
-                    len(my_list_1),
-                    len(my_list_2)):
-                new_list.append(0)
+            pass
 
     return (new_list)
 
