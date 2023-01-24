@@ -54,6 +54,8 @@ class Square:
     @size.setter
     def size(self, value: int):
         """Sets the value for size
+
+
         Args:
             value (int): new value for size
         ."""
@@ -79,12 +81,13 @@ class Square:
 
     @property
     def position(self):
-        """Returns instance square postion"""
+        """Returns instance square postion."""
         return (self.__position)
 
     @position.setter
     def position(self, value: tuple[int, int]):
         """Setting the value for position
+
         Args:
             value (tuple): new postion value
         """
