@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 
 class Square:
-    """
-    Creates a square object.
+    """Creates a square object.
+
+    This class makes a square object with the
+    necessary attr for a square to allow for computation.
     """
 
     def __init__(self, size: int):
-        """
-        Square object constructor
+        """Square object constructor
 
         Args:
             size (int): The size of the square
