@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 def list_division(my_list_1, my_list_2, list_length):
 
@@ -20,10 +20,3 @@ def list_division(my_list_1, my_list_2, list_length):
 
     return (new_list)
 
-
-if __name__ == '__main__':
-    m_list = [1, 2, 3, 0, 5, 6]
-    m_list_2 = [1, 2, "jojo", 4, 5, 6, 7]
-
-    new_list = list_division(m_list, m_list_2, 7)
-    print(new_list)
