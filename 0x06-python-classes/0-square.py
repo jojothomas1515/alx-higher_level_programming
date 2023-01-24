@@ -8,5 +8,5 @@ i hope this is the cause.
 
 
 class Square:
-
+    """Empty class."""
     pass
