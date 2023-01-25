@@ -56,7 +56,7 @@ class Square:
 
         Args:
             value (int): new value for size.
-        ."""
+        """
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
