@@ -67,7 +67,7 @@ class Square:
 
         If the size is 0 print a newline
         """
-        print("\n"*self.__position[1], end="")
+        print("{}".format("\n"*self.__position[1]), end="")
 
         for i in range(self.__size):
             print("{}{}".format(" "*self.__position[0], "#"*self.__size))
