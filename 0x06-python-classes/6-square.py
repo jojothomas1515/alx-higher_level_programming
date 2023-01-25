@@ -15,7 +15,7 @@ class Square:
     necessary attr for a square to allow for computation.
     """
 
-    def __init__(self, size: int = 0, position=(0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         """Square object constructor
 
         Args:
