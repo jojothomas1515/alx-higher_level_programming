@@ -52,7 +52,7 @@ class Square:
 
     @property
     def size(self):
-        """Size of the square"""
+        """Returns Size of the square"""
         return (self.__size)
 
     @size.setter
@@ -72,7 +72,7 @@ class Square:
             self.__size = value
 
     def my_print(self):
-        """Prints the square followed by a newline"""
+        """Prints the square followed by a newline."""
 
         print("\n"*self.__position[1], end="")
         for i in range(self.__size):
@@ -83,7 +83,7 @@ class Square:
 
     @property
     def position(self):
-        """Print Position"""
+        """ Returns Print Position."""
         return (self.__position)
 
     @position.setter
