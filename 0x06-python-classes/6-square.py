@@ -3,7 +3,6 @@
 """This is a module documentation
 
 This is so fucked up
-
 """
 
 
@@ -14,7 +13,6 @@ class Square:
 
     Example:
         square_1 : Square = Square(10,(1,1))
-
     """
 
     def __init__(self, size: int = 0, position=(0, 0)):
@@ -25,7 +23,6 @@ class Square:
         Args:
             size (int): size of the square
             position (tuple): display position
-
         """
 
         if not isinstance(size, int):
@@ -46,7 +43,6 @@ class Square:
         """Square Area
 
         Computes the area of a Square
-
         """
         return (self.__size ** 2)
 
@@ -61,7 +57,6 @@ class Square:
 
         Args:
             value (int): the new size
-
         """
 
         if type(value) is not int:
@@ -95,7 +90,6 @@ class Square:
 
         Description:
             Sets the new position
-
         """
 
         if type(value) is not tuple:
