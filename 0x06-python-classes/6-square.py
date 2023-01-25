@@ -9,35 +9,38 @@ i hope this is the cause.
 
 
 class Square:
-    """Creates a square object.
+    """
+    Creates a square object.
 
     This class makes a square object with the
     necessary attr for a square to allow for computation.
     """
 
     def __init__(self, size: int = 0, position: tuple[int, int] = (0, 0)):
-        """Square object constructor
+        """
+        Square object constructor
 
         Args:
             size (int): The size of the square
             position (tuple[int, int]): The position of the square
         """
-        if type(size) is not int:
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        if type(position) is not tuple:
+        if not isinstance(position, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if type(position[0]) is not int or type(position[1]) is not int:
+        if not (isinstance(position[0], int) or
+                isinstance(position[1], int)):
             raise TypeError("position must be a tuple of 2 positive integers")
         if position[0] < 0 or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__size = size
-            self.__position = position
+        self.__size = size
+        self.__position = position
 
     def area(self):
-        """Calculate the area of a square
+        """
+        Calculate the area of a square
 
         Return:
             int: the current square area.
