@@ -19,6 +19,7 @@ class Square:
 
         Args:
             size (int): The size of the square
+            position: Is A tupple
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
