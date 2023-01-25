@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+This is a module documentation
+
+This is so fucked up
+"""
 
 class Square:
 
