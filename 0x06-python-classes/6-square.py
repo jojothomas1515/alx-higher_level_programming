@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 
-"""
-This is a module level documentation
+"""This is a module level documentation
 
 My checker has been failing even tho the ouput is the same,
-i hope this is the cause.
+i hope this is the cause
 """
 
 
@@ -16,7 +15,7 @@ class Square:
     necessary attr for a square to allow for computation.
     """
 
-    def __init__(self, size: int = 0, position: tuple[int, int] = (0, 0)):
+    def __init__(self, size: int = 0, position = (0, 0)):
         """
         Square object constructor
 
@@ -81,7 +80,9 @@ class Square:
 
     @property
     def position(self):
-        """Returns instance square postion."""
+        """
+        Returns instance square postion.
+        """
         return (self.__position)
 
     @position.setter
