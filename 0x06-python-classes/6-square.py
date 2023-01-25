@@ -65,7 +65,8 @@ class Square:
             self.__size = value
 
     def my_print(self):
-        """print the square to stdout as '#'
+        """
+        print the square to stdout as #
 
         If the size is 0 print a newline.
         """
@@ -86,7 +87,7 @@ class Square:
         """Setting the value for position
 
         Args:
-            value (tuple): new postion value.
+            value: new postion value.
         """
         if type(value) is not tuple:
             raise TypeError("value must be a tuple of 2 positive integers")
