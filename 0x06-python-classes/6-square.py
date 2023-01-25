@@ -7,10 +7,6 @@ i hope this is the cause.
 """
 
 
-from turtle import position
-from typing import Type
-
-
 class Square:
     """Creates a square object.
 
