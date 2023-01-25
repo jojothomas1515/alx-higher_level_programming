@@ -19,8 +19,8 @@ class Square:
         """Square object constructor
 
         Args:
-            size (int): The size of the square
-            position (tuple): The position of the square
+            size: The size of the square
+            position: The position of the square
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
