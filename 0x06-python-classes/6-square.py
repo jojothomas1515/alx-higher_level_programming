@@ -22,7 +22,7 @@ class Square:
 
         Args:
             size : The size of the square
-            position: print position
+            position : print position
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
