@@ -50,6 +50,7 @@ class Square:
 
     @property
     def position(self):
+        """The print position of the square."""
         return self.__position
 
     @position.setter
