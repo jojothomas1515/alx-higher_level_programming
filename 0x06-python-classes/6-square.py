@@ -18,7 +18,7 @@ class Square:
         """Square object constructor
 
         Args:
-            size : The size of the square
+            size (int): The size of the square
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
