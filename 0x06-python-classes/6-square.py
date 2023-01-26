@@ -40,11 +40,7 @@ class Square:
 
     @size.setter
     def size(self, value: int):
-        """Sets the value for size
-        
-        Args:
-            value : value
-        """
+        """Sets the value for size."""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
@@ -99,5 +95,5 @@ if __name__ == '__main__':
 
     print("--")
 
-    my_square_3 = Square(3, (20,))
+    my_square_3 = Square(3, (30, 3))
     my_square_3.my_print()
