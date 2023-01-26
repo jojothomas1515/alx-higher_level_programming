@@ -7,6 +7,9 @@ i hope this is the cause.
 """
 
 
+from turtle import pos
+
+
 class Square:
     """Creates a square object.
 
@@ -14,18 +17,25 @@ class Square:
     necessary attr for a square to allow for computation.
     """
 
-    def __init__(self, size: int = 0):
+    def __init__(self, size: int = 0, position=(0, 0)):
         """Square object constructor
 
         Args:
             size (int): The size of the square
+            position: print position
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
-        if size < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
+        elif not isinstance(position, tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif not (isinstance(position[0], int) or
+                  isinstance(position[1], int)):
+            raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__size = size
+            self.__position = position
 
     def area(self):
         """Calculate the area of a square
