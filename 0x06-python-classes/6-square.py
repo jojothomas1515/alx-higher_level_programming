@@ -56,7 +56,7 @@ class Square:
     @position.setter
     def position(self, value):
         """Setter for the print position tuple
-        
+
         Args:
             value : tuple of integers
         """
@@ -73,8 +73,9 @@ class Square:
 
         If the size is 0 print a newline
         """
+        print("\n"*self.position[1], end="")
         for i in range(self.__size):
-            print("#"*self.__size)
+            print("{}{}".format(" "*self.position[0], "#"*self.__size))
 
         if self.__size == 0:
             print()
