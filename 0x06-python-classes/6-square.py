@@ -21,7 +21,7 @@ class Square:
         """Square object constructor
 
         Args:
-            size (int): The size of the square
+            size : The size of the square
             position: print position
         """
         if type(size) is not int:
@@ -35,7 +35,6 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__size = size
-            self.__position = position
 
     def area(self):
         """Calculate the area of a square
