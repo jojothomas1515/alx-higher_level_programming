@@ -120,7 +120,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return (result_str)
         for i in range(self.height):
-            result_str += "{}{}".format(str(Rectangle.print_symbol)*self.width,
+            result_str += "{}{}".format(str(self.print_symbol)*self.width,
                                         "\n" if i != self.height - 1
                                         else "")
 
@@ -137,11 +137,28 @@ class Rectangle:
         print("Bye rectangle...")
 
 
-if __name__ == '__main__':
-    my_rectangle_1 = Rectangle(2, 4)
-    my_rectangle_2 = Rectangle(2, 4)
-    print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
-    del my_rectangle_1
-    print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
-    del my_rectangle_2
-    print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+if __name__ == "__main__":
+
+    my_rectangle_1 = Rectangle(8, 4)
+    print(my_rectangle_1)
+    print("--")
+    my_rectangle_1.print_symbol = "&"
+    print(my_rectangle_1)
+    print("--")
+
+    my_rectangle_2 = Rectangle(2, 1)
+    print(my_rectangle_2)
+    print("--")
+    Rectangle.print_symbol = "C"
+    print(my_rectangle_2)
+    print("--")
+
+    my_rectangle_3 = Rectangle(7, 3)
+    print(my_rectangle_3)
+
+    print("--")
+
+    my_rectangle_3.print_symbol ="fun!"
+    print(my_rectangle_3)
+
+    print("--")
