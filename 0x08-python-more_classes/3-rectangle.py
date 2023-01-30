@@ -111,8 +111,28 @@ class Rectangle:
             <3-rectangle.Rectangle object at 0x...>
 
         """
+        result_str = ""
         if self.width == 0 or self.height == 0:
-            return("")
-        result_str = "#"*self.width + "\n"
-        result_str = result_str * self.height
+            return (result_str)
+        for i in range(self.height):
+            result_str += "{}{}".format("#"*self.width,
+                                        "\n" if i != self.height - 1
+                                        else "")
+
         return result_str
+
+
+if __name__ == "__main__":
+    my_rectangle = Rectangle(2, 4)
+    print("Area: {} - Perimeter: {}".format(my_rectangle.area(),
+          my_rectangle.perimeter()))
+
+    print(str(my_rectangle))
+    print(repr(my_rectangle))
+
+    print("--")
+
+    my_rectangle.width = 10
+    my_rectangle.height = 3
+    print(my_rectangle)
+    print(repr(my_rectangle))
