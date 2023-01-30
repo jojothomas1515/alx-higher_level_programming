@@ -110,9 +110,9 @@ class Rectangle:
             >>> print(repr(rect)) # doctest: +ELLIPSIS
             <3-rectangle.Rectangle object at 0x...>
 
-
         """
-
+        if self.width == 0 or self.height == 0:
+            return("")
         result_str = "#"*self.width + "\n"
         result_str = result_str * self.height
         return result_str
