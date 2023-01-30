@@ -74,9 +74,15 @@ class Rectangle:
 
         Example:
             >>> rect = Rectangle(3,4)
+            >>> rect2 = Rectangle(2, 0)
 
             >>> rect.perimeter()
             14
 
+            >>> rect2.perimeter()
+            0
+
         """
+        if self.height == 0 or self.width == 0:
+            return (0)
         return (2 * (self.height + self.width))
