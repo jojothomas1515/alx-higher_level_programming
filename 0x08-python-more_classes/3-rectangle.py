@@ -90,37 +90,6 @@ class Rectangle:
             return (0)
         return (2 * (self.height + self.width))
 
-    def __str__(self):
-        """String representation of rectangle instance
-
-        Example:
-            >>> rect = Rectangle(3,4)
-            >>> rect2 = Rectangle(2, 0)
-
-            >>> print(str(rect))
-            ###
-            ###
-            ###
-            ###
-            <BLANKLINE>
-
-            >>> print(str(rect2))
-            <BLANKLINE>
-
-            >>> print(repr(rect)) # doctest: +ELLIPSIS
-            <3-rectangle.Rectangle object at 0x...>
-
-        """
-        result_str = ""
-        if self.width == 0 or self.height == 0:
-            return (result_str)
-        for i in range(self.height):
-            result_str += "{}{}".format("#"*self.width,
-                                        "\n" if i != self.height - 1
-                                        else "")
-
-        return result_str
-
 
 if __name__ == "__main__":
     my_rectangle = Rectangle(2, 4)
