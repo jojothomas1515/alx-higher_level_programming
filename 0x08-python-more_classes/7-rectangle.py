@@ -120,7 +120,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return (result_str)
         for i in range(self.height):
-            result_str += "{}{}".format(Rectangle.print_symbol*self.width,
+            result_str += "{}{}".format(str(Rectangle.print_symbol)*self.width,
                                         "\n" if i != self.height - 1
                                         else "")
 
