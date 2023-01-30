@@ -122,9 +122,3 @@ class Rectangle:
         """string representation that can be evaluated"""
 
         return ("Rectangle({:d}, {:d})".format(self.width, self.height))
-
-    def __del__(self):
-        """Rectangle Destructor"""
-
-        print("Bye rectangle...")
-
