@@ -1,0 +1,31 @@
+==================================
+Tests for the add_integer function
+==================================
+
+Setup
+
+::
+
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+
+Test if the integer addition is correct
+
+::
+    >>> add_integer(22, 33)
+    55
+
+Test to check if the floats get cast int properly
+
+::
+
+    >>> add_integer(22.5, 33)
+    55
+
+Test to check if it throws TypeError
+
+::
+
+    >>> add_integer("22.5", 33)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
