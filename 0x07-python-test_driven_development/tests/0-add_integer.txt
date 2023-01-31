@@ -14,8 +14,12 @@ Test if the integer addition is correct
 ::
     >>> add_integer(22, 33)
     55
-    >>> add_integer(22, 33)
-    55
+
+    >>> add_integer(100, -2)
+    98
+
+    >>> add_integer(2)
+    100
 
 Test to check if the floats get cast int properly
 
@@ -31,3 +35,7 @@ Test to check if it throws TypeError
     >>> add_integer("22.5", 33)
     Traceback (most recent call last):
     TypeError: a must be an integer
+
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+    TypeError: b must be an integer

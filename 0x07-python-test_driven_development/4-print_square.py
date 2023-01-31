@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+
+def print_square(size):
+    """This function print a square using '#'
+
+    Args:
+        size (int): size of the square to print
+
+    """
+
+    if not isinstance(size, int):
+        raise (TypeError("size must be an integer"))
+    if size < 0:
+        raise (ValueError("size must be >= 0"))
+
+    for i in range(size):
+        print("{}{}".format("#"*size, "\n" if i < size - 1 else ""), end="")
+
+if __name__ == '__main__':
+
+    print_square(5)
