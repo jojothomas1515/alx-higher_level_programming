@@ -2,9 +2,6 @@
 """Add integer module """
 
 
-from sys import flags
-
-
 def add_integer(a, b=98):
     """add_integer function
 
