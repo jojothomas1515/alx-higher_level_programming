@@ -2,7 +2,7 @@
 
 import unittest
 
-max_integer = __import__("6-max_integer").max_integer
+max_integer = __import__(".././6-max_integer").max_integer
 
 
 """This is my testing module"""
@@ -16,3 +16,6 @@ class MaxIntegerTest(unittest.TestCase):
 
     def test_max_negatve(self):
         self.assertEqual(-1, max_integer([-11, -1,  -2, -3, -4, -5]))
+
+    def test_max_beginning(self):
+        self.assertEqual(5, max_integer([5, 1, 3, 4, 2]))
