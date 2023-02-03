@@ -26,7 +26,7 @@ def matrix_divided(matrix, div):
         if len(matrix[idx]) != len(i):
             raise (TypeError("Each row of the matrix must have the same size"))
 
-    if not isinstance(div, int | float):
+    if not (isinstance(div, int) or isinstance(div, float)):
         raise (TypeError("div must be a number"))
 
     if div == 0:
@@ -37,5 +37,5 @@ def matrix_divided(matrix, div):
 
 
 if __name__ == '__main__':
-    li = [[1, 2, 3], [4, 5, 5], "jojo"]
+    li = [[2]]
     print(matrix_divided(li, 3))
