@@ -55,4 +55,5 @@ Test for float overflow
 
     >>> import sys
     >>> add_integer(1, + float("inf"))
-    89
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
