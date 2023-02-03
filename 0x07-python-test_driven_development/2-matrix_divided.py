@@ -3,7 +3,7 @@
 """matrix divided module"""
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix=[[1]], div=2):
     """matrix divided function
 
     Args:
