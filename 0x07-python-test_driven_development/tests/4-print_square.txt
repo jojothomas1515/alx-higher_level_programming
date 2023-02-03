@@ -27,3 +27,13 @@ Test size int  > 0
         >>> print_square(2)
         ##
         ##
+
+Test no arguments
+
+::
+
+        >>> print_square()
+        ##
+        ##
+
+
