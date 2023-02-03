@@ -55,4 +55,4 @@ Test for float overflow
 
     >>> import sys
     >>> add_integer(1, + float("inf"))
-    89    
+    89
