@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 """Add integer module """
 
-
-from cmath import nan
-
-
 def add_integer(a, b=98):
     """add_integer function
 
