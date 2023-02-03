@@ -14,7 +14,7 @@ def print_square(size):
         raise (ValueError("size must be >= 0"))
 
     for i in range(size):
-        print("{}{}".format("#"*size, "\n" if i < size - 1 else ""), end="")
+        print("{}".format("#\n"*size, end=""))
 
 if __name__ == '__main__':
 
