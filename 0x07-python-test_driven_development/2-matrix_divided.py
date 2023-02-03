@@ -18,7 +18,8 @@ def matrix_divided(matrix, div):
                      for j in i]
                     for i in matrix]]:
 
-        raise (TypeError("matrix must be a matrix (list of lists) of integers/floats"))
+        raise (TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats"))
 
     for i in matrix:
         temp = matrix.index(i) - 1
