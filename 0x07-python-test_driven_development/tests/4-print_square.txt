@@ -19,3 +19,12 @@ Test size lesser than 0
         >>> print_square(-2)
         Traceback (most recent call last):
         ValueError: size must be >= 0
+
+Test size int  > 0
+
+::
+
+        >>> print_square(2)
+        ##
+        ##
+        <BLANKLINE>
