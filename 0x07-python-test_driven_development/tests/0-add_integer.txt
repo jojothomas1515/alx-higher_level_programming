@@ -39,3 +39,11 @@ Test to check if it throws TypeError
     >>> add_integer(4, "School")
     Traceback (most recent call last):
     TypeError: b must be an integer
+
+Test for float nan
+
+::
+
+    >>> add_integer(4, float("nan"))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
