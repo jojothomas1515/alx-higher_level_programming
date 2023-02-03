@@ -1,0 +1,14 @@
+Doctest file for say my name
+
+Setup
+
+::
+
+    say_my_name = __import__('../3-say_my_name').say_my_name
+
+Test say my name
+
+::
+
+    >>> say_my_name("Jojo", "Thomas")
+    My name is Jojo Thomas
