@@ -10,6 +10,9 @@ def append_write(filename="", text=""):
     :param text: text to write
     """
 
+    counts = 0
     with open(filename, 'a', 'utf-8') as mf:
-        return mf.write(text)
+        counts = mf.write(text)
+
+    return counts
 
