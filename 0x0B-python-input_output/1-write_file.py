@@ -10,6 +10,8 @@ def write_file(filename="", text=""):
     :param filename: target file
     :param text: text to be written
     """
+    count = 0
 
     with open(filename, "w", encoding="utf-8") as mf:
-        mf.write(text)
+        count = mf.write(text)
+    return count
