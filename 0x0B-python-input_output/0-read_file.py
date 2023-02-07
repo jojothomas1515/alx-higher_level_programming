@@ -9,7 +9,9 @@ def read_file(filename=""):
     :param filename: name of the file to print in the filesystem
     """
     with open(filename) as r:
-        print(r.read())
+        for i in r:
+            print(r.readline())
+        r.close()
 
 
 if __name__ == '__main__':
