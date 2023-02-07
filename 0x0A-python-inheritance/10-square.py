@@ -51,10 +51,6 @@ class Rectangle(BaseGeometry):
 
         return self.__width * self.__height
 
-    def print(self):
-        """Print the rectangle information"""
-        print(self)
-
     def __str__(self):
         """"""
         return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
@@ -76,10 +72,6 @@ class Square(Rectangle):
     def area(self):
         """area of a square"""
         return (self.__size ** 2)
-
-    def print(self):
-        """"""
-        print(self)
 
     def __str__(self):
         """"""
