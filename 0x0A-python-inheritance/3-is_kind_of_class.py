@@ -9,7 +9,7 @@ def is_kind_of_class(obj: object, a_class):
     instance of subclass
 
     :param obj: class instance/object
-    :param a_class: class to com
+    :param a_class: class to compare
     :return: True or False
     """
 
