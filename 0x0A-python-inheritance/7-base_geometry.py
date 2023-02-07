@@ -20,7 +20,7 @@ class BaseGeometry:
         :param name: a name string
         :param value: value to validates
         """
-        if not isinstance(value, int):
+        if not value.__class__ == int:
             raise TypeError("{} must be an integer".format(name))
 
         if value <= 0:
