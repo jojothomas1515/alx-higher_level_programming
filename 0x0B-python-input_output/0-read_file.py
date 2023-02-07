@@ -1,0 +1,13 @@
+#!/bin/usr/python3
+
+""" IO module"""
+
+
+def read_file(filename=""):
+    """
+    open,  read and print to the stdout
+    :param filename: name of the file to print in the filesystem
+    """
+    with open(filename, "r+") as r:
+        for l in r:
+            print(l)
