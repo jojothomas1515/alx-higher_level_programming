@@ -8,7 +8,7 @@ def read_file(filename=""):
     open,  read and print to the stdout
     :param filename: name of the file to print in the filesystem
     """
-    with open(filename, "r+") as r:
+    with open(filename) as r:
         for i in r:
             print(r.readline())
 
