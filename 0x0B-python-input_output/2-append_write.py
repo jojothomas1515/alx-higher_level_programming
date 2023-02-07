@@ -15,4 +15,3 @@ def append_write(filename="", text=""):
         counts = mf.write(text)
 
     return counts
-
