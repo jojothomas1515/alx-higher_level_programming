@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 
 """ IO module"""
 
@@ -11,3 +11,7 @@ def read_file(filename=""):
     with open(filename, "r+") as r:
         for l in r:
             print(l)
+
+
+if __name__ == '__main__':
+    read_file("0-read_file.py")
