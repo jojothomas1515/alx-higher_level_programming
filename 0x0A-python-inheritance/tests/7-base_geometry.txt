@@ -1,0 +1,23 @@
+==================================
+Doctest for 7-base_geometry module
+==================================
+
+SETUP
+
+::
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+_______
+
+Testing integer validator to Raised exceptions
+
+::
+
+>>> b = BaseGeometry()
+>>> b.integer_validator("jojo", -24)
+Traceback (most recent call last):
+ValueError: jojo must be greater than 0
+>>> b.integer_validator("jojo", "24")
+Traceback (most recent call last):
+TypeError: jojo must be an integer
