@@ -21,10 +21,10 @@ class BaseGeometry:
         :param value: value to validates
         """
         if not value.__class__ == int:
-            raise TypeError("{} must be an integer".format(name))
+            raise TypeError("{} must be an integer".format(str(name)))
 
         if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+            raise ValueError("{} must be greater than 0".format(str(name)))
 
 
 class Rectangle(BaseGeometry):
