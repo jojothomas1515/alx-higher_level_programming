@@ -21,3 +21,12 @@ ValueError: jojo must be greater than 0
 >>> b.integer_validator("jojo", "24")
 Traceback (most recent call last):
 TypeError: jojo must be an integer
+>>> b.integer_validator("jojo", (1,))
+Traceback (most recent call last):
+TypeError: jojo must be an integer
+>>> b.integer_validator("jojo", [1])
+Traceback (most recent call last):
+TypeError: jojo must be an integer
+>>> b.integer_validator("jojo", [2,1])
+Traceback (most recent call last):
+TypeError: jojo must be an integer
