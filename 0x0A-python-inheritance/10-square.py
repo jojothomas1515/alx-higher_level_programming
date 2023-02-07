@@ -87,4 +87,4 @@ class Square(Rectangle):
 
 if __name__ == '__main__':
     s = Square(5)
-    s.print()
+    print(s)
