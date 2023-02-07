@@ -4,7 +4,11 @@
 
 
 def append_write(filename="", text=""):
-    """"""
+    """
+    append to file
+    :param filename: filename
+    :param text: text to write
+    """
 
-    with open(file=filename, mode='a', encoding='utf-8') as mf:
+    with open(filename, 'a', 'utf-8') as mf:
         mf.write(text)
