@@ -9,8 +9,7 @@ def read_file(filename=""):
     :param filename: name of the file to print in the filesystem
     """
     with open(filename, "r+") as r:
-        for l in r:
-            print(l)
+        print(r.read())
 
 
 if __name__ == '__main__':
