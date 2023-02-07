@@ -13,4 +13,4 @@ def is_same_class(obj, a_class):
     :param a_class: Class
     :return: True or false
     """
-    return isinstance(obj, a_class)
+    return obj.__class__ == a_class
