@@ -51,3 +51,7 @@ TypeError: jojo must be an integer
 >>> b.integer_validator("jojo", None)
 Traceback (most recent call last):
 TypeError: jojo must be an integer
+
+>>> b.integer.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
