@@ -46,18 +46,15 @@ class Rectangle(BaseGeometry):
     def integer_validator(self, name: str, value):
         super().integer_validator(name, value)
 
-if __name__ == '__main__':
-    r = Rectangle(3, 5)
+    def area(self):
+        """:returns the area of a rectangle"""
 
-    print(r)
-    print(dir(r))
+        return self.__width * self.__height
 
-    try:
-        print("Rectangle: {} - {}".format(r.width, r.height))
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+    def print(self):
+        """Print the rectangle information"""
+        print(self)
 
-    try:
-        r2 = Rectangle(4, True)
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+    def __str__(self):
+        """"""
+        return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
