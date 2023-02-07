@@ -11,7 +11,7 @@ def append_write(filename="", text=""):
     """
 
     counts = 0
-    with open(filename, 'a', 'utf-8') as mf:
+    with open(filename, 'a', encoding='utf-8') as mf:
         counts = mf.write(text)
 
     return counts
