@@ -2,14 +2,29 @@
 
 """Add Item"""
 
+
+def load_from_json_file(filename):
+    """ Load from json file """
+
+    with open(filename, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_to_json_file(my_obj, filename):
+    """
+    hahahaahhah
+
+    :param my_obj:ojbj
+    :param filename:filename
+    """
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(my_obj, f)
+
+
 if __name__ == '__main__':
     from sys import argv
     import json
 
-    save_to_json_file = __import__(
-            '5-save_to_json_file').save_to_json_file
-    load_from_json_file = __import__(
-            '6-load_from_json_file').load_from_json_file
     li = []
 
     for i in argv[1:]:
