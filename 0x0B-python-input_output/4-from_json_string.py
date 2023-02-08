@@ -1,12 +1,12 @@
 #!/usr/bin/python3
+import json
 
 """json string"""
-import json
 
 
 def from_json_string(my_str):
-    """
-    from json string
+    """from json string
+
     :param my_str: the string
     :return: python object
     """
