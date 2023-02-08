@@ -26,9 +26,12 @@ if __name__ == '__main__':
     import json
 
     li = []
+    file_list = []
 
     for i in argv[1:]:
         li.append(i)
-
-    file_list: list = load_from_json_file("add_item.json")
+    try:
+        file_list: list = load_from_json_file("add_item.json")
+    except Exception as e:
+        pass
     save_to_json_file((file_list + li), "add_item.json")
