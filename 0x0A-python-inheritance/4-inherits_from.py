@@ -13,3 +13,8 @@ def inherits_from(obj, a_class):
     """
 
     return issubclass(obj.__class__, a_class)
+
+
+if __name__ == "__main__":
+    a = 1;
+    print(inherits_from(a, int))
