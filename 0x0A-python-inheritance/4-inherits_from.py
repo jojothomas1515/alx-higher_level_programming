@@ -11,10 +11,6 @@ def inherits_from(obj, a_class):
     :param a_class: class to compare
     :return: True or False
     """
-
+    if obj.__class__ == a_class:
+        return False
     return issubclass(obj.__class__, a_class)
-
-
-if __name__ == "__main__":
-    a = 1;
-    print(inherits_from(a, int))
