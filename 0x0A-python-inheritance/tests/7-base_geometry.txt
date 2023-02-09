@@ -60,6 +60,14 @@ ValueError: jojo must be greater than 0
 Traceback (most recent call last):
 TypeError: jojo must be an integer
 
+>>> b.integer_validator() #doctest: +ELLIPSIS
+Traceback (most recent call last):
+TypeError: ...
+
+>>> b.integer_validator("age") #doctest: +ELLIPSIS
+Traceback (most recent call last):
+TypeError: ...
+
 >>> b.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
@@ -67,3 +75,4 @@ Exception: area() is not implemented
 >>> BaseGeometry().area()
 Traceback (most recent call last):
 Exception: area() is not implemented
+
