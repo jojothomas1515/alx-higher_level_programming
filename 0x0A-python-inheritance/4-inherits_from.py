@@ -12,4 +12,4 @@ def inherits_from(obj, a_class):
     :return: True or False
     """
 
-    return (obj.__class__ == a_class)
+    return issubclass(obj, a_class)
