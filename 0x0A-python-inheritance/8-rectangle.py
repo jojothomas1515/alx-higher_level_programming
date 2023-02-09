@@ -2,29 +2,7 @@
 
 """Base Geometry Module"""
 
-
-class BaseGeometry:
-    """
-    Base Geometry class, from while other
-    classes are to be subclassed from
-    """
-
-    def area(self):
-        """The area of the object"""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name: str, value):
-        """
-        The method validates value
-
-        :param name: a name string
-        :param value: value to validates
-        """
-        if not value.__class__ == int:
-            raise TypeError("{} must be an integer".format(str(name)))
-
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(str(name)))
+BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 
 class Rectangle(BaseGeometry):
