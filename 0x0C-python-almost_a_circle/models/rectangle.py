@@ -112,8 +112,21 @@ class Rectangle(Base):
         print("\n" * self.y, end="")
         print((my_str + "\n") * self.height, end="")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         al = len(args)
+
+        if al == 0:
+            for k in kwargs:
+                if k == "id":
+                    self.id = kwargs["id"]
+                elif k == "width":
+                    self.width = kwargs["width"]
+                elif k == "height":
+                    self.height = kwargs["height"]
+                elif k == "x":
+                    self.x = kwargs["x"]
+                elif k == "y":
+                    self.y = kwargs["y"]
 
         if al > 0:
             self.id = args[0]
