@@ -108,7 +108,8 @@ class Rectangle(Base):
 
     def display(self):
         """visual representation of the rectangle in the terminal"""
-        my_str = "{}".format("#" * self.width)
+        my_str = "{}{}".format(" " * self.x, "#" * self.width)
+        print("\n" * self.y, end="")
         print((my_str + "\n") * self.height, end="")
 
     def __str__(self):
