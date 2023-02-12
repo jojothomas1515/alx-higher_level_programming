@@ -147,6 +147,11 @@ class Rectangle(Base):
         if al > 4:
             self.y = args[4]
 
+    def to_dictionary(self):
+        """Convert Rectangle attributes to dictionary"""
+        return dict(id=self.id, width=self.width, height=self.height,
+                    x=self.x, y=self.y)
+
     def __str__(self):
         """string representation"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(

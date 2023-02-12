@@ -3,29 +3,14 @@
 """ Main Module """
 
 from models.rectangle import Rectangle
+from models.base import Base
 from models.square import Square
 
 if __name__ == "__main__":
-    s1 = Square(5)
-    print(s1)
-
-    s1.update(10)
-    print(s1)
-
-    s1.update(1, 2)
-    print(s1)
-
-    s1.update(1, 2, 3)
-    print(s1)
-
-    s1.update(1, 2, 3, 4)
-    print(s1)
-
-    s1.update(x=12)
-    print(s1)
-
-    s1.update(size=7, y=1)
-    print(s1)
-
-    s1.update(89, 7)
-    print(s1)
+    r1 = Rectangle(10, 7, 2, 8)
+    dictionary = r1.to_dictionary()
+    json_dictionary = Base.to_json_string([dictionary])
+    print(dictionary)
+    print(type(dictionary))
+    print(json_dictionary)
+    print(type(json_dictionary))

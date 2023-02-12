@@ -64,7 +64,12 @@ class Square(Rectangle):
         if al > 3:
             self.y = args[3]
 
-    def __str__(self):
-        """String representation of the square object"""
-        return "[Square] ({}) {}/{} - {}".format(
-                self.id, self.x, self.y, self.width)
+    def to_dictionary(self):
+        """Convert Square attributes to dictionary"""
+        return dict(id=self.id, size=self.size,
+                    x=self.x, y=self.y)
+
+        def __str__(self):
+            """String representation of the square object"""
+            return "[Square] ({}) {}/{} - {}".format(
+                    self.id, self.x, self.y, self.width)
