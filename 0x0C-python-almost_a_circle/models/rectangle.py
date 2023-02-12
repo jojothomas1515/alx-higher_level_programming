@@ -113,6 +113,14 @@ class Rectangle(Base):
         print((my_str + "\n") * self.height, end="")
 
     def update(self, *args, **kwargs):
+        """Updates the Rectangle instance attributes
+
+        Args:
+            args: non keyword positional arguments to be set in this
+            order => id, width, height, x, y
+            kwargs: keyword argument only usable if args is None and
+            to be set if the corresponding instance attributes exist
+        """
         al = len(args)
 
         if al == 0:
