@@ -112,6 +112,20 @@ class Rectangle(Base):
         print("\n" * self.y, end="")
         print((my_str + "\n") * self.height, end="")
 
+    def update(self, *args):
+        al = len(args)
+
+        if al > 0:
+            self.id = args[0]
+        if al > 1:
+            self.width = args[1]
+        if al > 2:
+            self.height = args[2]
+        if al > 3:
+            self.x = args[3]
+        if al > 4:
+            self.y = args[4]
+
     def __str__(self):
         """string representation"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
