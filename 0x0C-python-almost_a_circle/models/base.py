@@ -2,6 +2,7 @@
 
 """ Base Class Module"""
 import json
+import csv
 
 
 class Base:
@@ -83,6 +84,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """load object from a file"""
         filename: str = "{}.json".format(cls.__name__)
 
         n_str: str = ""
@@ -100,3 +102,59 @@ class Base:
             obj_li.append(cls.create(**i))
 
         return obj_li
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Save to csv file
+
+        Args:
+            list_objs: list of object
+        """
+
+        filename = "{}.csv".format(cls.__name__)
+
+        with open(filename, "w", encoding="utf-8") as f:
+            if cls.__name__ == "Rectangle":
+                fieldnames = ['id', 'width', 'height', 'x', 'y']
+                file = csv.DictWriter(f, fieldnames=fieldnames)
+                file.writeheader()
+                for i in list_objs:
+                    file.writerow(i.to_dictionary())
+
+            if cls.__name__ == "Square":
+                fieldnames = ['id', 'size', 'x', 'y']
+                file = csv.DictWriter(f, fieldnames=fieldnames)
+                file.writeheader()
+                for i in list_objs:
+                    file.writerow(i.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls) -> list:
+        """load objects from csv file"""
+        filename = "{}.csv".format(cls.__name__)
+        li_obj = []
+
+        try:
+
+            with open(filename, "r", encoding="utf-8") as csvfile:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ['id', 'width', 'height', 'x', 'y']
+                    file = csv.DictReader(csvfile, fieldnames=fieldnames)
+                    headers = file.__next__()
+                    for f in file:
+                        f = {k: int(v) for k, v in f.items()}
+                        li_obj.append(cls.create(**f))
+
+                    return li_obj
+                if cls.__name__ == "Square":
+                    fieldnames = ['id', 'Size', 'x', 'y']
+                    file = csv.DictReader(csvfile, fieldnames=fieldnames)
+                    headers = file.__next__()
+                    for f in file:
+                        f = {k: int(v) for k, v in f.items()}
+                        li_obj.append(cls.create(**f))
+
+                    return li_obj
+
+        except Exception as e:
+            return []

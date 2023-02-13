@@ -8,7 +8,8 @@ from .base import Base
 class Rectangle(Base):
     """Rectangle class"""
 
-    def __init__(self, width: int, height: int, x: int = 0, y: int = 0, id=None):
+    def __init__(self, width: int,
+                 height: int, x: int = 0, y: int = 0, id=None):
         """Rectangle class constructor
 
         Args:
