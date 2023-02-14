@@ -69,7 +69,7 @@ class Square(Rectangle):
         return dict(id=self.id, size=self.size,
                     x=self.x, y=self.y)
 
-        def __str__(self):
-            """String representation of the square object"""
-            return "[Square] ({}) {}/{} - {}".format(
-                    self.id, self.x, self.y, self.width)
+    def __str__(self):
+        """String representation of the square object"""
+        return "[Square] ({}) {}/{} - {}".format(
+                self.id, self.x, self.y, self.size)

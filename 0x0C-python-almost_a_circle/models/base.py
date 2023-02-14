@@ -43,10 +43,14 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """save to file"""
+
         filename = "{}.json".format(cls.__name__)
         li = []
-        for i in list_objs:
-            li.append(i.to_dictionary())
+        if not isinstance(list_objs, list):
+            pass
+        else:
+            for i in list_objs:
+                li.append(i.to_dictionary())
         with open(filename, "w", encoding="utf-8") as f:
             f.write(cls.to_json_string(li))
 
@@ -74,7 +78,7 @@ class Base:
         """
         new: object
         if cls.__name__ == "Rectangle":
-            new = cls(1, 2)
+            new = cls(1, 1)
         elif cls.__name__ == "Square":
             new = cls(1)
 
@@ -118,15 +122,17 @@ class Base:
                 fieldnames = ['id', 'width', 'height', 'x', 'y']
                 file = csv.DictWriter(f, fieldnames=fieldnames)
                 file.writeheader()
-                for i in list_objs:
-                    file.writerow(i.to_dictionary())
+                if type(list_objs) == list:
+                    for i in list_objs:
+                        file.writerow(i.to_dictionary())
 
             if cls.__name__ == "Square":
                 fieldnames = ['id', 'size', 'x', 'y']
                 file = csv.DictWriter(f, fieldnames=fieldnames)
                 file.writeheader()
-                for i in list_objs:
-                    file.writerow(i.to_dictionary())
+                if type(list_objs) == list:
+                    for i in list_objs:
+                        file.writerow(i.to_dictionary())
 
     @classmethod
     def load_from_file_csv(cls) -> list:
@@ -146,8 +152,9 @@ class Base:
                         li_obj.append(cls.create(**f))
 
                     return li_obj
+
                 if cls.__name__ == "Square":
-                    fieldnames = ['id', 'Size', 'x', 'y']
+                    fieldnames = ['id', 'size', 'x', 'y']
                     file = csv.DictReader(csvfile, fieldnames=fieldnames)
                     headers = file.__next__()
                     for f in file:
