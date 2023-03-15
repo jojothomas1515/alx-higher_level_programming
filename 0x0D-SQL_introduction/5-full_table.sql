@@ -1,0 +1,1 @@
+-- Prints the full description of a table
