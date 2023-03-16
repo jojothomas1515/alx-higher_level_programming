@@ -1,7 +1,7 @@
 -- city by state join
-SELECT id,
-        name,
-        name
+SELECT cities.id,
+        cities.name,
+        states.name
 FROM cities c
         INNER JOIN states s
         ON c.state_id = s.id
