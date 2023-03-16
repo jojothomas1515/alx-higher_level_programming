@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mariadb://localhost:3306/hbtn_0d_tvshows</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="hbtn_0d_tvshows_rate@localhost" uuid="a5596f82-c949-4419-bc25-24b48e191b92">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://localhost:3306/hbtn_0d_tvshows_rate</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
