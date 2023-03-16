@@ -1,4 +1,4 @@
-# all show without all
+-- all show without all
 SELECT title
 FROM tv_shows
 WHERE title NOT IN (SELECT title
