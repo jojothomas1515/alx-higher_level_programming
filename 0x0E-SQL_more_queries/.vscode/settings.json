@@ -25,6 +25,19 @@
                         "username": "jojo",
                         "name": "alx_tv",
                         "password": ""
+                },
+                {
+                        "mysqlOptions": {
+                                "authProtocol": "default"
+                        },
+                        "previewLimit": 50,
+                        "server": "localhost",
+                        "port": 3306,
+                        "driver": "MariaDB",
+                        "username": "jojo",
+                        "database": "hbtn_0d_tvshows",
+                        "name": "tvshows",
+                        "password": ""
                 }
         ]
 }
