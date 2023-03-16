@@ -1,5 +1,4 @@
 -- list the  of california
-use hbtn_0d_usa;
 SELECT id,
         name
 FROM cities c
