@@ -20,7 +20,7 @@ except IndexError as e:
     exit(-1)
 
 c = conn.cursor()
-c.execute("SELECT * FROM states WHERE name REGEXP '^N.*' ORDER BY name")
+c.execute("SELECT * FROM states WHERE name REGEXP '^N.*' ORDER BY id")
 
 for row in c.fetchall():
     print(row)
