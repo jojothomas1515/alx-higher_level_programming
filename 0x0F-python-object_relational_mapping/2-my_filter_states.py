@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     c = conn.cursor()
     try:
-        c.execute(f"SELECT * FROM states WHERE name = '{info[4]}' ORDER BY id")
+        c.execute(f"SELECT * FROM states WHERE name = {info[4]} ORDER BY id")
     except IndexError as e:
         print("search string not passed")
         exit(-2)
