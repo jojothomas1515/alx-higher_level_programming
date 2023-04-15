@@ -18,10 +18,9 @@ try:
 except IndexError as e:
     print(f"USAGE: {info[0]} <user> <password> <database>")
     exit(-1)
-    
-c = conn.cursor()
 
-c.execute("SELECT * FROM states ORDER BY id")
+c = conn.cursor()
+c.execute("SELECT * FROM states WHERE name REGEXP '^N.*' ORDER BY name")
 
 for row in c.fetchall():
     print(row)
