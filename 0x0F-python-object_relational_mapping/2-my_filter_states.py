@@ -24,9 +24,7 @@ if __name__ == '__main__':
     except IndexError as e:
         print("search string not passed")
         exit(-2)
-        
     for row in c.fetchall():
         print(row)
-
     c.close()
     conn.close()
