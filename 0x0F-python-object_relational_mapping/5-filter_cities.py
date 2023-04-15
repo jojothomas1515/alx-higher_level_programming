@@ -27,9 +27,10 @@ if __name__ == '__main__':
                   {'state': info[4]})
     except IndexError as e:
         print('please pass the state')
-        
+
+    li = []
     for row in c.fetchall():
-        print(row[0], end=' ')
-    print()
+        li.append(row[0])
+    print(" ".join(li))
     c.close()
     conn.close()
