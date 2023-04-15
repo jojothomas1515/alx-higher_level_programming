@@ -31,6 +31,7 @@ if __name__ == '__main__':
     li = []
     for row in c.fetchall():
         li.append(row[0])
-    print(" ".join(li))
+    if (len(li) != 0):
+        print(" ".join(li))
     c.close()
     conn.close()
