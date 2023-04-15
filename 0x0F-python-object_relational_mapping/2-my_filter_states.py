@@ -7,7 +7,6 @@ import MySQLdb
 import sys
 
 if __name__ == '__main__':
-    
     info = sys.argv
     try:
         conn = MySQLdb.connect(host='localhost',
@@ -19,10 +18,9 @@ if __name__ == '__main__':
     except IndexError as e:
         print(f"USAGE: {info[0]} <user> <password> <database>")
         exit(-1)
-
     c = conn.cursor()
     try:
-        c.execute(f"SELECT * FROM states WHERE name = {info[4]} ORDER BY id")
+        c.execute(f"SELECT * FROM states WHERE name=\"{info[4]}\" ORDER BY id")
     except IndexError as e:
         print("search string not passed")
         exit(-2)
