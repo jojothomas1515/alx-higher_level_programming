@@ -19,7 +19,7 @@ if __name__ == '__main__':
         print(f"USAGE: {info[0]} <user> <password> <database>")
         exit(-1)
     c = conn.cursor()
-    c.execute("SELECT * FROM states WHERE name REGEXP '^N.*' ORDER BY id")
+    c.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
 
     for row in c.fetchall():
         print(row)
