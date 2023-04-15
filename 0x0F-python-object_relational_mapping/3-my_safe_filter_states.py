@@ -19,9 +19,10 @@ if __name__ == '__main__':
         print(f"USAGE: {info[0]} <user> <password> <database>")
         exit(-1)
     c = conn.cursor()
+
     try:
         c.execute("SELECT * FROM states WHERE name LIKE BINARY %(states)s",
-                  {'states':info[4]})
+                  {'states': info[4]})
     except IndexError as e:
         print("search string not passed")
         exit(-2)
