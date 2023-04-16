@@ -20,8 +20,8 @@ if __name__ == '__main__':
         Session.configure(bind=engine)
         session = Session()
         data = session.query(State).filter(
-            State.name.like("{}".format(sys.argv[4])
-                            )).order_by(State.id).first()
+            State.name == str(sys.argv[4])
+                            ).order_by(State.id).first()
         if not data:
             print("Not Found")
         else:
