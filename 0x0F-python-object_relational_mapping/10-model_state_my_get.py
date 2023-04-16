@@ -19,13 +19,13 @@ if __name__ == '__main__':
         Session = sessionmaker()
         Session.configure(bind=engine)
         session = Session()
-        datas = session.query(State).filter(
-            State.name.like("%a%")).order_by(State.id).all()
-        if len(datas) == 0:
+        data = session.query(State).filter(
+            State.name.like("{}".format(sys.argv[4])
+                            )).order_by(State.id).first()
+        if not data:
             print("Not Found")
         else:
-            for data in datas:
-                print("{}: {}".format(data.id, data.name))
+            print("{}".format(data.id))
 
     except IndexError as e:
         print("Usage:{} <user> <password> database"
