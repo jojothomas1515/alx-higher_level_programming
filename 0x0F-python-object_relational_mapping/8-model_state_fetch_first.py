@@ -20,7 +20,10 @@ if __name__ == '__main__':
         Session.configure(bind=engine)
         session = Session()
         data = session.query(State).order_by(State.id).first()
-        print("{}: {}".format(data.id, data.name))
+        if data:
+            print("{}: {}".format(data.id, data.name))
+        else:
+            print()
 
     except IndexError as e:
         print("Usage:{} <user> <password> database"
