@@ -31,5 +31,7 @@ if __name__ == '__main__':
         li.append(row[0])
     if (len(li) != 0):
         print(", ".join(li))
+    else:
+        print()
     c.close()
     conn.close()
