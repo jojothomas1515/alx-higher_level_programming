@@ -25,7 +25,7 @@ if __name__ == '__main__':
         else:
             print("Nothing")
 
-    except IndexError as e:
+    except IndexError:
         print("Usage:{} <user> <password> database"
               .format(sys.argv[1]))
         exit(-1)

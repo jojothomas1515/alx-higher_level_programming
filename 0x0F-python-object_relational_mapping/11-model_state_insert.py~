@@ -9,7 +9,6 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
     try:
-
         engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                                .format(sys.argv[1],
                                        sys.argv[2],
@@ -19,10 +18,10 @@ if __name__ == '__main__':
         Session = sessionmaker()
         Session.configure(bind=engine)
         session = Session()
-        for data in session.query(State).order_by(State.id):
-            print("{}: {}".format(data.id, data.name))
-
-    except IndexError as e:
+        louisiana = State(name="Louisiana")
+        session.add(louisiana)
+        session.commit()
+    except IndexError:
         print("Usage:{} <user> <password> database"
-              .format(sys.argv[1]))
+              .format(sys.argv[0]))
         exit(-1)
