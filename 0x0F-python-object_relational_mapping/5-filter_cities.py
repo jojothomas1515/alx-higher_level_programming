@@ -22,8 +22,7 @@ if __name__ == '__main__':
     try:
         c.execute("SELECT c.name FROM cities c " +
                   "INNER JOIN states st WHERE st.id = c.state_id " +
-                  "AND st.name=%(state)s " +
-                  "ORDER BY c.id", {'state': info[4]})
+                  "AND st.name=%(state)s ", {'state': info[4]})
     except IndexError as e:
         print('please pass the state')
 
