@@ -21,6 +21,7 @@ if __name__ == '__main__':
         louisiana = State(name="Louisiana")
         session.add(louisiana)
         session.commit()
+        print(louisiana.id)
     except IndexError:
         print("Usage:{} <user> <password> <database>"
               .format(sys.argv[0]))

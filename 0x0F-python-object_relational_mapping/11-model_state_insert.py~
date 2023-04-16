@@ -22,6 +22,6 @@ if __name__ == '__main__':
         session.add(louisiana)
         session.commit()
     except IndexError:
-        print("Usage:{} <user> <password> database"
+        print("Usage:{} <user> <password> <database>"
               .format(sys.argv[0]))
         exit(-1)
