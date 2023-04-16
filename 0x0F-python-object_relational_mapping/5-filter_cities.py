@@ -23,8 +23,7 @@ if __name__ == '__main__':
         c.execute("SELECT c.name FROM cities c " +
                   "JOIN states st ON st.id = c.state_id " +
                   "WHERE st.name LIKE BINARY %(state)s " +
-                  "ORDER BY c.id",
-                  {'state': info[4]})
+                  "ORDER BY c.id", {'state': info[4]})
     except IndexError as e:
         print('please pass the state')
 
