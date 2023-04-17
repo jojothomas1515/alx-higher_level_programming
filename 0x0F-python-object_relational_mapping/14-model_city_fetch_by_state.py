@@ -20,11 +20,12 @@ if __name__ == '__main__':
         Session = sessionmaker()
         Session.configure(bind=engine)
         session = Session()
-        cities = session.query(City).where(City.state_id == State.id).all()
-        if len(cities) != 0:
-            for city in cities:
-                print("{}: ({}) {}".format(city.state.name,
-                                           city.id, city.name))
+        datas = session.query(City, State).join(State).where(City.state_id == State.id).all()
+        print(datas)
+        if len(datas) != 0:
+            for data in datas:
+                print("{}: ({}) {}".format(data[1].name,
+                                           data[0].id, city[0].name))
         else:
             print("Nothing")
     except IndexError:
