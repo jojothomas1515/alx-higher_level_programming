@@ -20,8 +20,8 @@ if __name__ == '__main__':
         Session = sessionmaker()
         Session.configure(bind=engine)
         session = Session()
-        datas = session.query(State.name, City.id, City.name).join(State).filter(
-        City.state_id == State.id).all()
+        datas = session.query(State.name, City.id, City.name).join(
+            State).filter(City.state_id == State.id).all()
         for data in datas:
             print("{}: ({}) {}".format(data[0],
                                        data[1], data[2]))
