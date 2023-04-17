@@ -20,7 +20,7 @@ if __name__ == '__main__':
         Session = sessionmaker()
         Session.configure(bind=engine)
         session = Session()
-        datas = session.query(City, State).join(State).where(
+        datas = session.query(City, State).join(State).filter(
             City.state_id == State.id).all()
         print(datas)
         if len(datas) != 0:
