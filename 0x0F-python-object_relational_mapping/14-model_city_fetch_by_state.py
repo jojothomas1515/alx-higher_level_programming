@@ -8,6 +8,7 @@ from model_city import City, Base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+
 if __name__ == '__main__':
     try:
         engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
@@ -22,7 +23,7 @@ if __name__ == '__main__':
         cities = session.query(City).all()
         if len(cities) != 0:
             for city in cities:
-                print("{}: ({}) {}".format("jojo",
+                print("{}: ({}) {}".format(city.state.name,
                                            city.id, city.name))
         else:
             print("Nothing")

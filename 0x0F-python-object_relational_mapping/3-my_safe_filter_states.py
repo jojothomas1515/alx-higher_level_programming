@@ -15,7 +15,7 @@ if __name__ == '__main__':
                                password=str(info[2]),
                                database=str(info[3]),
                                charset="utf8")
-    except IndexError as e:
+    except IndexError:
         print(f"USAGE: {info[0]} <user> <password> <database>")
         exit(-1)
     c = conn.cursor()
@@ -23,7 +23,7 @@ if __name__ == '__main__':
     try:
         c.execute("SELECT * FROM states WHERE name LIKE BINARY %(states)s",
                   {'states': info[4]})
-    except IndexError as e:
+    except IndexError:
         print("search string not passed")
         exit(-2)
     for row in c.fetchall():

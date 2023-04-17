@@ -4,7 +4,7 @@
 
 from sqlalchemy import Column, String, Integer, ForeignKey
 from sqlalchemy.orm import relationship
-from model_state import Base
+from model_state import Base, State
 
 
 class City(Base):
@@ -16,3 +16,6 @@ class City(Base):
     state_id = Column(Integer, ForeignKey('states.id'))
 
     state = relationship("State", back_populates='cities')
+
+
+State.cities = relationship("City", order_by=City.id, back_populates="state")
