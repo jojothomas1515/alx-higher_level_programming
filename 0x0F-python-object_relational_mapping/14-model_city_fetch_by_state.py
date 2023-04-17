@@ -21,13 +21,11 @@ if __name__ == '__main__':
         Session.configure(bind=engine)
         session = Session()
         datas = session.query(State.name, City.id, City.name).join(State).filter(
-            City.state_id == State.id).all()
-        if len(datas) != 0:
-            for data in datas:
-                print("{}: ({}) {}".format(data[0],
-                                           data[1], data[2]))
-        else:
-            print("Nothing")
+        City.state_id == State.id).all()
+        for data in datas:
+            print("{}: ({}) {}".format(data[0],
+                                       data[1], data[2]))
+
     except IndexError:
         print("Usage:{} <user> <password> <database>"
               .format(sys.argv[0]))
