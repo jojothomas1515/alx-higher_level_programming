@@ -22,7 +22,6 @@ if __name__ == '__main__':
         session = Session()
         datas = session.query(State.name, City.id, City.name).join(State).filter(
             City.state_id == State.id).all()
-        print(datas)
         if len(datas) != 0:
             for data in datas:
                 print("{}: ({}) {}".format(data[0],
