@@ -25,7 +25,7 @@ if __name__ == '__main__':
         if len(datas) != 0:
             for data in datas:
                 print("{}: ({}) {}".format(data[1].name,
-                                           data[0].id, city[0].name))
+                                           data[0].id, data[0].name))
         else:
             print("Nothing")
     except IndexError:
