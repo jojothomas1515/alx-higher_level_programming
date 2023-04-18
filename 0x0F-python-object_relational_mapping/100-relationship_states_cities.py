@@ -4,7 +4,8 @@
 
 from sqlalchemy.engine import create_engine
 from sqlalchemy.orm.session import sessionmaker
-from relationship_city import State, City, Base
+from relationship_city import City, Base
+from relationship_state import State
 import sys
 
 engine = create_engine("mysql+mysqldb://{}")

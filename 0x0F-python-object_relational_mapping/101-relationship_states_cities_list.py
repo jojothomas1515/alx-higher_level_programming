@@ -16,7 +16,7 @@ Results must be displayed as they are in the example below
 Your code should not be executed when imported.
 """
 
-from model_city import City, State, Base
+from relationship_city import City, State, Base
 from sqlalchemy.orm.session import sessionmaker
 from sqlalchemy.engine import create_engine
 import sys
