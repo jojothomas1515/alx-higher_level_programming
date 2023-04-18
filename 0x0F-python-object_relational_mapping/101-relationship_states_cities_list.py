@@ -34,11 +34,12 @@ if __name__ == '__main__':
     Session.configure(bind=engine)
     session = Session()
 
-    for state in session.query(State):
+    states = session.query(State).order_by(State.id).all()
+
+    for state in states:
         print("{}: {}".format(state.id, state.name))
-        print(state.cities)
 
         # because of the relationship between state and city table
         # we can get all the cities associated with a state
-        # for city in state.cities:
-        #     print("\t{}: {}".format(city.id, city.name))
+        for city in state.cities:
+            print("\t{}: {}".format(city.id, city.name))
