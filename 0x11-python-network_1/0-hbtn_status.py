@@ -6,7 +6,8 @@ import urllib.request as req
 with req.urlopen("https://alx-intranet.hbtn.io/status") as data:
     bd = data.read()
     msg = data.msg
+    print(data.status)
     print(
-        "Body response:\n    - type: {}\n    - content: {}\n"
-        "    - utf8 content: {}"
+        "Body response:\n\t- type: {}\n\t- content: {}\n"
+        "\t- utf8 content: {}"
         .format(type(bd), bd, msg))
