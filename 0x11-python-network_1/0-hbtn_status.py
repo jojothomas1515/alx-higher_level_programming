@@ -4,7 +4,6 @@
 import urllib.request as req
 
 if __name__ == "__main__":
-
     with req.urlopen("https://alx-intranet.hbtn.io/status") as data:
         bd = data.read()
         msg = data.msg
