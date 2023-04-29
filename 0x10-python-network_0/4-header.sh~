@@ -1,3 +1,0 @@
-#!/bin/bash
-# setting headers with curl
-curl -sI -X OPTIONS "$1" | awk 'BEGIN {FS=": ";} /^Allow/ {print $2;};'
