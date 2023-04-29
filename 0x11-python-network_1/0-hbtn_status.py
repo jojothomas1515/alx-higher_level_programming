@@ -7,7 +7,7 @@ if __name__ == "__main__":
     with req.urlopen("https://alx-intranet.hbtn.io/status") as data:
         bd = data.read()
         msg = data.msg
-        print(
-            "Body response:\n\t- type: {}\n\t- content: {}\n"
-            "\t- utf8 content: {}"
-            .format(type(bd), bd, msg))
+        print("Body response:")
+        print("\t- type: {}".format(type(bd)))
+        print("\t- content: {}".format(bd))
+        print("\t- utf8 content: {}".format(msg))
