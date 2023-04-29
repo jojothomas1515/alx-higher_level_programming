@@ -18,7 +18,7 @@ if __name__ == '__main__':
     else:
         try:
             print("[{}] {}"
-                  .format(res.get('id')
+                  .format(res.get('id'),
                           res.get('name')))
         except Exception:
             print("Not a valid JSON")
