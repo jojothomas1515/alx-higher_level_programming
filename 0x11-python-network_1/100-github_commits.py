@@ -11,5 +11,7 @@ if __name__ == '__main__':
     url = "https://api.github.com/repos/{}/{}/commits"\
         .format(owner_name, repo_name)
     data = requests.get(url)
-    for i in data.json():
-        print("{}: {}".format(i.get('sha'), i['commit']['author']['name']))
+    for idx, value in enumerate(data.json()):
+        if idx == 10:
+            break
+        print("{}: {}".format(value.get('sha'), value['commit']['author']['name']))
