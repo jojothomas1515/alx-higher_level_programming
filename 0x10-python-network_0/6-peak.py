@@ -11,4 +11,3 @@ def find_peak(list_of_integers: list):
         return None
     res.sort()
     return res[len_l - 1]
-
