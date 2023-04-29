@@ -14,4 +14,6 @@ if __name__ == '__main__':
     for idx, value in enumerate(data.json()):
         if idx == 10:
             break
-        print("{}: {}".format(value.get('sha'), value['commit']['author']['name']))
+        print("{}: {}"
+              .format(value.get('sha'),
+                      value['commit']['author']['name']))
