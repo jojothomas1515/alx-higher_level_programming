@@ -12,13 +12,13 @@ if __name__ == '__main__':
     except IndexError:
         q = ""
     data = requests.post(url, data={'q': q})
-    res = data.json()
-    if len(res) == 0:
-        print("No result")
-    else:
-        try:
+    try:
+        res = data.json()
+        if len(res) == 0:
+            print("No result")
+        else:
             print("[{}] {}"
                   .format(res['id'],
                           res['name']))
-        except Exception:
-            print("Not a valid JSON")
+    except Exception:
+        print("Not a valid JSON")
