@@ -1,0 +1,31 @@
+#!/usr/bin/node
+
+// using request to the title of the star wars episode passed as id
+const request = require('request');
+const process = require('process');
+const argv = process.argv;
+const argLen = argv.length;
+
+if (argLen !== 3) { process.exit(-1); }
+
+const uri = argv[2];
+
+// check the characters array in each episode json object and checks if the char link is included
+function movieFilterOnChar(movie) {
+    const char_link = `https://swapi-api.alx-tools.com/api/people/18`;
+    console.log("this got called");
+    // return movie.characters.includes(char_link);
+    console.log(movie);
+    return true;
+}
+
+// log out the number of episodes the character appeared
+function numOfMovies (err, response, body) {
+    if (err) { console.log(err); } else if (response.statusCode === 200) {
+	data = JSON.parse(body);
+	films = data.results.filter(movieFilterOnChar);
+	console.log(films.length);
+    }
+}
+
+request(uri, numOfMovies);
