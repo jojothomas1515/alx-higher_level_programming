@@ -19,7 +19,7 @@ function logCharactersName (charLink) {
     } else {
       if (res.statusCode === 200) {
         const char = JSON.parse(body);
-        console.log(char.name);
+        return (char.name);
       }
     }
   });
@@ -30,7 +30,8 @@ function movie (err, response, body) {
   if (err) { console.log(err); } else if (response.statusCode === 200) {
     try {
       const data = JSON.parse(body);
-      data.characters.map(logCharactersName);
+      const results = data.characters.map(logCharactersName);
+      results.forEach(x => console.log(x));
     } catch (excp) {
       process.exit();
     }
