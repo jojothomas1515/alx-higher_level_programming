@@ -19,9 +19,13 @@ function movieFilterOnChar (movie) {
 // log out the number of episodes the character appeared
 function numOfMovies (err, response, body) {
   if (err) { console.log(err); } else if (response.statusCode === 200) {
-    const data = JSON.parse(body);
-    const films = data.results.filter(movieFilterOnChar);
-    console.log(films.length);
+    try {
+      const data = JSON.parse(body);
+      const films = data.results.filter(movieFilterOnChar);
+      console.log(films.length);
+    } catch (excp) {
+      process.exit();
+    }
   }
 }
 
