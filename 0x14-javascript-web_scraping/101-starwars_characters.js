@@ -11,19 +11,17 @@ if (argLen !== 3) { process.exit(-1); }
 const uri = `https://swapi-api.alx-tools.com/api/films/${argv[2]}`;
 
 // check the characters array in each episode json object and checks if the char link is included
-function logCharactersName (charLink) {
-  request(charLink, (err, res, body) => {
-    if (err) {
-      console.log(err);
-      process.exit(-1);
-    } else {
-      if (res.statusCode === 200) {
-        const char = JSON.parse(body);
-        return (char.name);
+const logCharactersName = (charLink) =>
+  new Promise((resolve, reject) => {
+    request(charLink, (err, res, body) => {
+      if (err) { reject(err); } else {
+        if (res.statusCode === 200) {
+          const info = JSON.parse(body);
+          resolve(info.name);
+        }
       }
-    }
+    });
   });
-}
 
 // log out the number of episodes the character appeared
 function movie (err, response, body) {
@@ -31,7 +29,7 @@ function movie (err, response, body) {
     try {
       const data = JSON.parse(body);
       const results = data.characters.map(logCharactersName);
-      results.forEach(x => console.log(x));
+      Promise.all(results).then(ans => ans.forEach(name => console.log(name)));
     } catch (excp) {
       process.exit();
     }
