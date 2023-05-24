@@ -12,8 +12,7 @@ const uri = argv[2];
 
 // check the characters array in each episode json object and checks if the char link is included
 function movieFilterOnChar (movie) {
-  const charLink = 'https://swapi-api.alx-tools.com/api/people/18/';
-  return movie.characters.includes(charLink);
+    return movie.characters.filter(link => link.endsWith('18/')).length;
 }
 
 // log out the number of episodes the character appeared
