@@ -1,0 +1,6 @@
+$.get("https://swapi-api.alx-tools.com/api/films/?format=json",
+      function (data, status) {
+	  console.log(data);
+	  // const charac = data;
+	  // $("DIV#character").text(charac.name);
+      });
