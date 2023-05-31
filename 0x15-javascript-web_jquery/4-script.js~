@@ -1,0 +1,2 @@
+$("#toggle_header").bind("click", function() {
+    $("header").toggle("red")});
